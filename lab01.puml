@@ -1,0 +1,50 @@
+@startuml
+abstract class Vehicle {
+    - data:String
+     +abstract void start()
+     +abstract void stop()
+    
+}
+
+class VehicleDirector
+class VehicleFactory
+class VehicleManager 
+class MotorcycleBuilder
+interface VehicleBuilder
+class Car
+class Main
+
+' main relationship
+Main ..> VehicleFactory
+Main ..> VehicleManager
+
+' VehicleFactory relationship
+VehicleFactory .> VehicleDirector
+VehicleFactory ..> MotorcycleBuilder
+VehicleFactory ..> CarBuilder
+
+'CarBuilder <. VehicleFactory
+
+'vehicle director relationship
+VehicleDirector --> Vehicle
+VehicleDirector ..> VehicleBuilder
+
+'vhicle relationship
+Vehicle <|-- Car
+Vehicle <|-- Motorcycle
+
+'vehicle builder relationship
+VehicleBuilder .|> Vehicle
+CarBuilder --|>VehicleBuilder
+MotorcycleBuilder --|>VehicleBuilder
+
+
+
+
+
+
+
+
+VehicleManager o-- Vehicle
+
+@enduml
