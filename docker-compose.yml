@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: Ryan-mysql-compose
+    environment:
+      MYSQL_ROOT_PASSWORD: Ocean1234
+      MYSQL_DATABASE: bookvault
+      MYSQL_USER: Xihai
+      MYSQL_PASSWORD: Xihai1234
+    volumes:
+      - /Users/renxihai/data/mysql:/var/lib/mysql
+      - .:/docker-entrypoint-initdb.d
+
+    ports:
+      - "3306:3306"
+
+

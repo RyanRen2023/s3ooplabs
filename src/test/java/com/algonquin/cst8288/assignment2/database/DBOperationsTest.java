@@ -1,6 +1,9 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
+ * Student Name: Xihai Ren
+ * Student No: 041127486
+ * Professor: Islam Gomaa
+ * Due Date: 2024/06/14
+ * Description: Assignment 2 - Library Management System
  */
 package com.algonquin.cst8288.assignment2.database;
 
@@ -9,55 +12,42 @@ import com.algonquin.cst8288.assignment2.event.EventFactory;
 import com.algonquin.cst8288.assignment2.event.EventType;
 import com.algonquin.cst8288.assignment2.event.WorkShopEvent;
 import java.util.Random;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
+ * Unit tests for the DBOperations class. This class contains tests to verify
+ * the functionality of the DBOperations class, including testing the creation,
+ * retrieval, update, and deletion of events in the database.
  *
- * @author renxihai
+ * @version 1.0.0
+ * @since Oracle 17.0.11
+ *
+ * @author Xihai Ren
  */
 public class DBOperationsTest {
 
+    /**
+     * Default constructor for DBOperationsTest.
+     */
     public DBOperationsTest() {
     }
 
-    @BeforeClass
-    public static void setUpClass() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
-    }
-
     /**
-     * Test of createEvent method, of class DBOperations.
+     * Tests the createEvent method of the DBOperations class. Verifies that an
+     * event can be created in the database.
      */
     @Test
     public void testCreateEvent() {
         System.out.println("createEvent");
-        Event event = new WorkShopEvent();
-        event.setEventName("Work shop at Jun 9,2024");
-        event.setEventDescription("this work shop is public");
-        event.setEventActivities(EventType.WORKSHOP.name());
-        event.calculateAdmissionFee();
-        DBOperations.createEvent(event);
-
+        Event event = EventFactory.createEvent(EventType.BOOK_LAUNCH);
+        int event_id = DBOperations.createEvent(event);
+        assertTrue(event_id > 0);
     }
 
     /**
-     * Test of retrieveEvent method, of class DBOperations.
+     * Tests the retrieveEvent method of the DBOperations class. Verifies that
+     * an event can be retrieved from the database by its ID.
      */
     @Test
     public void testRetrieveEvent() {
@@ -67,11 +57,11 @@ public class DBOperationsTest {
         Event result = DBOperations.retrieveEvent(event_id);
         assertNotNull(result);
         assertEquals(result.getEventId(), event_id);
-
     }
 
     /**
-     * Test of updateEvent method, of class DBOperations.
+     * Tests the updateEvent method of the DBOperations class. Verifies that an
+     * event can be updated in the database.
      */
     @Test
     public void testUpdateEvent() {
@@ -82,14 +72,15 @@ public class DBOperationsTest {
         String expected = "this is a new name " + random.nextInt(100);
         event = DBOperations.retrieveEvent(event_id);
         event.setEventName(expected);
+        event.calculateAdmissionFee();
         DBOperations.updateEvent(event);
         Event event2 = DBOperations.retrieveEvent(event_id);
         assertEquals(event2.getEventName(), expected);
-
     }
 
     /**
-     * Test of deleteEvent method, of class DBOperations.
+     * Tests the deleteEvent method of the DBOperations class. Verifies that an
+     * event can be deleted from the database.
      */
     @Test
     public void testDeleteEvent() {
@@ -99,5 +90,4 @@ public class DBOperationsTest {
         boolean result = DBOperations.deleteEvent(event_id);
         assertTrue(result);
     }
-
 }

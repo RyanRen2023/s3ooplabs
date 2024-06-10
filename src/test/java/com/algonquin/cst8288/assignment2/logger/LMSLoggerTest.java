@@ -1,6 +1,9 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
+ * Student Name: Xihai Ren
+ * Student No: 041127486
+ * Professor: Islam Gomaa
+ * Due Date: 2024/06/14
+ * Description: Assignment 2 - Library Management System
  */
 package com.algonquin.cst8288.assignment2.logger;
 
@@ -12,8 +15,14 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
+ * Unit tests for the LMSLogger class. This class contains tests to verify the
+ * functionality of the LMSLogger class, including testing logging at different
+ * levels and ensuring the singleton pattern.
  *
- * @author renxihai
+ * @version 1.0.0
+ * @since Oracle 17.0.11
+ *
+ * @author Xihai Ren
  */
 public class LMSLoggerTest {
 
@@ -21,21 +30,35 @@ public class LMSLoggerTest {
     private static final PrintStream originalOut = System.out;
     LMSLogger instance = LMSLogger.getLMSLogger();
 
+    /**
+     * Default constructor for LMSLoggerTest.
+     */
     public LMSLoggerTest() {
     }
 
+    /**
+     * Sets up the test environment. This method is called before each test
+     * method is executed. It redirects the standard output to a
+     * ByteArrayOutputStream for testing purposes.
+     */
     @Before
     public void setUp() {
         System.setOut(new PrintStream(outContent));
     }
 
+    /**
+     * Tears down the test environment. This method is called after each test
+     * method is executed. It restores the standard output to its original
+     * state.
+     */
     @After
     public void tearDown() {
         System.setOut(originalOut);
     }
 
     /**
-     * Test of setLogLevel method, of class LMSLogger.
+     * Tests the setLogLevel method of the LMSLogger class. Verifies that the
+     * log level can be set and that logging at the DEBUG level works.
      */
     @Test
     public void testSetLogLevel() {
@@ -45,11 +68,11 @@ public class LMSLoggerTest {
         instance.setLogLevel(logLevel);
         instance.log("Change to DEBUG Level");
         assertTrue(outContent.toString().trim().contains("Logger Level DEBUG"));
-
     }
 
     /**
-     * Test of getLMSLogger method, of class LMSLogger.
+     * Tests the getLMSLogger method of the LMSLogger class. Verifies that the
+     * logger follows the singleton pattern.
      */
     @Test
     public void testGetLMSLogger() {
@@ -57,83 +80,77 @@ public class LMSLoggerTest {
         LMSLogger expResult = LMSLogger.getLMSLogger();
         LMSLogger result = LMSLogger.getLMSLogger();
         assertSame(expResult, result);
-
     }
 
     /**
-     * Test of log method, of class LMSLogger.
+     * Tests the log method of the LMSLogger class. Verifies that a message can
+     * be logged at the default INFO level.
      */
     @Test
     public void testLog() {
         System.out.println("log");
         String info = "This is default info level";
-        LMSLogger instance = LMSLogger.getLMSLogger();
         instance.log(info);
+        assertTrue(outContent.toString().trim().contains("Logger Level INFO"));
     }
 
     /**
-     * Test of info method, of class LMSLogger.
+     * Tests the info method of the LMSLogger class. Verifies that a message can
+     * be logged at the INFO level.
      */
     @Test
     public void testInfo() {
         System.out.println("info");
         String log = "";
-        LMSLogger instance = LMSLogger.getLMSLogger();
         instance.info(log);
         assertTrue(outContent.toString().trim().contains("Logger Level INFO"));
-
     }
 
     /**
-     * Test of debug method, of class LMSLogger.
+     * Tests the debug method of the LMSLogger class. Verifies that a message
+     * can be logged at the DEBUG level.
      */
     @Test
     public void testDebug() {
         System.out.println("debug");
         String log = "";
-        LMSLogger instance = LMSLogger.getLMSLogger();;
         instance.debug(log);
         assertTrue(outContent.toString().trim().contains("Logger Level DEBUG"));
-
     }
 
     /**
-     * Test of error method, of class LMSLogger.
+     * Tests the error method of the LMSLogger class. Verifies that a message
+     * can be logged at the ERROR level.
      */
     @Test
     public void testError() {
         System.out.println("error");
         String log = "";
-        LMSLogger instance = LMSLogger.getLMSLogger();;
         instance.error(log);
         assertTrue(outContent.toString().trim().contains("Logger Level ERROR"));
-
     }
 
     /**
-     * Test of trace method, of class LMSLogger.
+     * Tests the trace method of the LMSLogger class. Verifies that a message
+     * can be logged at the TRACE level.
      */
     @Test
     public void testTrace() {
         System.out.println("trace");
         String log = "";
-        LMSLogger instance = LMSLogger.getLMSLogger();;
         instance.trace(log);
         assertTrue(outContent.toString().trim().contains("Logger Level TRACE"));
-
     }
 
     /**
-     * Test of warn method, of class LMSLogger.
+     * Tests the warn method of the LMSLogger class. Verifies that a message can
+     * be logged at the WARN level.
      */
     @Test
     public void testWarn() {
         System.out.println("warn");
         String log = "";
-        LMSLogger instance = LMSLogger.getLMSLogger();;
         instance.warn(log);
         assertTrue(outContent.toString().trim().contains("Logger Level WARN"));
-
     }
-
 }

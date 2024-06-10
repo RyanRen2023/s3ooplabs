@@ -1,5 +1,23 @@
+/*
+ * Student Name: Xihai Ren
+ * Student No: 041127486
+ * Professor: Islam Gomaa
+ * Due Date: 2024/06/14
+ * Description: Assignment 2 - Library Management System
+ */
 package com.algonquin.cst8288.assignment2.event;
 
+/**
+ * An abstract class representing a generic event. This class provides common
+ * properties and methods for different types of events. Subclasses must
+ * implement the abstract method calculateAdmissionFee to provide specific
+ * admission fee calculations.
+ *
+ * @version 1.0.0
+ * @since Oracle 17.0.11
+ *
+ * @author Xihai Ren
+ */
 public abstract class Event {
 
     protected int eventId;
@@ -8,11 +26,16 @@ public abstract class Event {
     protected String eventActivities;
     protected double admissionFees;
 
+    /**
+     * Default constructor.
+     */
     public Event() {
-
+        // This constructor is intentionally empty. Nothing special is needed here.
     }
 
     /**
+     * Gets the name of the event.
+     *
      * @return the eventName
      */
     public String getEventName() {
@@ -20,6 +43,8 @@ public abstract class Event {
     }
 
     /**
+     * Sets the name of the event.
+     *
      * @param eventName the eventName to set
      */
     public void setEventName(String eventName) {
@@ -27,6 +52,8 @@ public abstract class Event {
     }
 
     /**
+     * Gets the description of the event.
+     *
      * @return the eventDescription
      */
     public String getEventDescription() {
@@ -34,6 +61,8 @@ public abstract class Event {
     }
 
     /**
+     * Sets the description of the event.
+     *
      * @param eventDescription the eventDescription to set
      */
     public void setEventDescription(String eventDescription) {
@@ -41,6 +70,8 @@ public abstract class Event {
     }
 
     /**
+     * Gets the activities of the event.
+     *
      * @return the eventActivities
      */
     public String getEventActivities() {
@@ -48,6 +79,8 @@ public abstract class Event {
     }
 
     /**
+     * Sets the activities of the event.
+     *
      * @param eventActivities the eventActivities to set
      */
     public void setEventActivities(String eventActivities) {
@@ -55,6 +88,8 @@ public abstract class Event {
     }
 
     /**
+     * Gets the admission fees for the event.
+     *
      * @return the admissionFees
      */
     public double getAdmissionFees() {
@@ -62,21 +97,35 @@ public abstract class Event {
     }
 
     /**
+     * Sets the admission fees for the event.
+     *
      * @param admissionFees the admissionFees to set
      */
     public void setAdmissionFees(double admissionFees) {
         this.admissionFees = admissionFees;
     }
 
+    /**
+     * Gets the ID of the event.
+     *
+     * @return the eventId
+     */
     public int getEventId() {
         return eventId;
     }
 
+    /**
+     * Sets the ID of the event.
+     *
+     * @param eventId the eventId to set
+     */
     public void setEventId(int eventId) {
         this.eventId = eventId;
     }
 
-    // Every library as it own admission fee
+    /**
+     * Abstract method to calculate the admission fee for the event. Subclasses
+     * must provide their own implementation of this method.
+     */
     public abstract void calculateAdmissionFee();
-
 }
