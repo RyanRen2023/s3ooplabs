@@ -26,7 +26,7 @@ VehicleFactory ..> CarBuilder
 'CarBuilder <. VehicleFactory
 
 'vehicle director relationship
-VehicleDirector --> Vehicle
+VehicleDirector ..> Vehicle
 VehicleDirector ..> VehicleBuilder
 
 'vhicle relationship
@@ -34,9 +34,9 @@ Vehicle <|-- Car
 Vehicle <|-- Motorcycle
 
 'vehicle builder relationship
-VehicleBuilder .|> Vehicle
-CarBuilder --|>VehicleBuilder
-MotorcycleBuilder --|>VehicleBuilder
+VehicleBuilder .> Vehicle
+CarBuilder .|>VehicleBuilder
+MotorcycleBuilder .|>VehicleBuilder
 
 
 
