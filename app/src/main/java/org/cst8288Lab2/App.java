@@ -23,8 +23,11 @@ public class App {
         //Ensure that you use the Properties class to load values from the database.properties file
         Properties dbConnection = new Properties();
         
+     
+        System.out.println(System.getProperty("user.dir"));
+
         //Preserve this input path
-        try (InputStream in = new FileInputStream("./app/data/database.properties")){
+        try (InputStream in = new FileInputStream("./data/database.properties.cfg")){
             try(BufferedReader br = new BufferedReader(new InputStreamReader(in))){
                 String out;
                 while ((out = br.readLine()) != null){
@@ -36,7 +39,7 @@ public class App {
         }
 
         //Preserve this input path
-        try (InputStream in = new FileInputStream("./app/data/bulk-import.csv")){
+        try (InputStream in = new FileInputStream("./data/bulk-import.csv")){
             try(BufferedReader br = new BufferedReader(new InputStreamReader(in))){
                 String out;
                 while ((out = br.readLine()) != null){
