@@ -21,7 +21,7 @@ class event.WorkShopEvent
 class event.BookLaunchEvent
 class event.KidsStoryEvent
 class event.MovieNightEvent
-abstract class event.EventFactory
+class event.EventFactory
 
 
 
@@ -33,14 +33,15 @@ LibraryFactory ..> Library
 Library <|-- PublicLibrary
 Library <|-- AcademicLibrary
 LibraryType <. Library
-PublicLibrary .> EventFactory
-AcademicLibrary .> EventFactory
+'PublicLibrary .> EventFactory
+'AcademicLibrary .> EventFactory
 
 
 Library .> Event 
+Library .> EventFactory
 
-Event <.. EventFactory
 Event .> EventType
+EventFactory .> Event
 Event <|-- WorkShopEvent
 Event <|-- BookLaunchEvent
 Event <|-- KidsStoryEvent
@@ -67,7 +68,7 @@ WorkShopEvent ..> LMSLogger
 BookLaunchEvent ..> LMSLogger
 KidsStoryEvent ..> LMSLogger
 MovieNightEvent ..> LMSLogger
-EventFactory ..> LMSLogger
+'EventFactory ..> LMSLogger
 
 
 @enduml

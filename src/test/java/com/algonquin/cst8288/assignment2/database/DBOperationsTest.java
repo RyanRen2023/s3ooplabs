@@ -10,7 +10,6 @@ package com.algonquin.cst8288.assignment2.database;
 import com.algonquin.cst8288.assignment2.event.Event;
 import com.algonquin.cst8288.assignment2.event.EventFactory;
 import com.algonquin.cst8288.assignment2.event.EventType;
-import com.algonquin.cst8288.assignment2.event.WorkShopEvent;
 import java.util.Random;
 import org.junit.Test;
 import static org.junit.Assert.*;
