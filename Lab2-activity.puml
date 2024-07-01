@@ -1,0 +1,19 @@
+@startuml
+start
+:read CSV;
+repeat
+:validate each item individually;
+if (Good valided?) then (yes)
+: add to imported container;
+else
+: add to error container;
+endif
+repeat while (more data?) is (yes)
+:iterate imported container;
+:add to database;
+:generated imported report;
+:iterate imported container;
+:generated error report;
+stop
+
+@enduml

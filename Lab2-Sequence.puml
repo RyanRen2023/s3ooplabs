@@ -1,0 +1,11 @@
+@startuml
+App -> FileOperator: readCSV
+App -> Formatter: formatString
+App -> Validation: validate
+App -> DBOperator: saveTodb
+App -> ImportedReport: generateReport
+ImportedReport -> FileOperator:saveReport
+App -> ErrorReport: generateReport
+ErrorReport -> FileOperator:saveReport
+
+@enduml

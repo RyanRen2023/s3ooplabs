@@ -1,0 +1,63 @@
+@startuml
+
+'top to bottom direction
+left to right direction
+
+package dao{
+
+    DataOperator --> GenericDAO
+
+    abstract class GenericDAO{
+        -DBConnection connection;
+    }
+
+    interface OneIdCRUD
+    interface TwoIdsCRUD
+
+
+    GenericDAO -> DBConnection
+
+    GenericDAO <|-- StudentDAO
+    GenericDAO <|-- CourseDAO
+    GenericDAO <|-- StudentCourseDAO   
+
+    OneIdCRUD <|.. StudentDAO
+    OneIdCRUD <|.. CourseDAO
+    TwoIdsCRUD <|.. StudentCourseDAO  
+}
+
+package dto{
+    class StudentDTO
+    class CourseDTO
+    class StudentCourseDTO
+    enum Term
+    StudentCourseDTO ..> Term
+}
+
+package main{    
+    App --> Formatter
+    App ..> Validation
+   
+    
+}
+
+package report{
+    interface Report{
+        +String generateReport()
+    }
+    class ImportedReport
+    class ErrorReport
+    Report <|.. ImportedReport
+    Report <|.. ErrorReport
+}
+
+ App ..> DataOperator
+ App ..> Report
+
+ StudentDAO ..> StudentDTO
+ CourseDAO ..> CourseDTO
+ StudentCourseDAO ..> StudentCourseDTO
+
+
+
+@enduml

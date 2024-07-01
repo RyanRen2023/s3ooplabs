@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-lab2
+    environment:
+      MYSQL_ROOT_PASSWORD: Ocean1234
+      MYSQL_DATABASE: lab2
+      MYSQL_USER: Xihai
+      MYSQL_PASSWORD: Xihai1234
+    volumes:
+      - /Users/renxihai/data/mysql-lab02:/var/lib/mysql
+
+    ports:
+      - "3306:3306"
+
