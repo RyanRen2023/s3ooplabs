@@ -5,8 +5,9 @@ package org.cst8288Lab2.dao;
  * Student No: 041127486
  * Professor: Islam Gomaa
  * Due Date: 2024/07/07
- * Description: Lab 2 - Library Management System
+ * Description: Lab 2 - DAO Pattern
  */
+import org.cst8288Lab2.utility.PropertiesTool;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

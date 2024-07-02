@@ -1,3 +1,11 @@
+/*
+ * Student Name: Xihai Ren
+ * Student No: 041127486
+ * Professor: Islam Gomaa
+ * Due Date: 2024/07/07
+ * Description: Lab 2 - Data Access Object for Course
+ */
+
 package org.cst8288Lab2.dao;
 
 import java.sql.Connection;
@@ -6,12 +14,34 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.cst8288Lab2.dto.CourseDTO;
 
+/**
+ * A Data Access Object (DAO) class to manage Course data in the database.
+ * This class provides methods to retrieve, insert, update, and delete
+ * Course records.
+ *
+ * @version 1.0.0
+ * @since Oracle 17.0.11
+ * 
+ * @author Xihai Ren
+ */
 public class CourseDAO extends GenericDAO<CourseDTO> implements OneIdCRUD<CourseDTO, String> {
 
+    /**
+     * Constructs a CourseDAO with the specified database connection.
+     *
+     * @param connection the database connection to be used by this DAO
+     */
     public CourseDAO(Connection connection) {
         super(connection);
     }
 
+    /**
+     * Retrieves a CourseDTO object from the database using the specified course ID.
+     *
+     * @param id the course ID
+     * @return the CourseDTO object corresponding to the specified course ID,
+     *         or null if no matching course is found
+     */
     @Override
     public CourseDTO retrieve(String id) {
         CourseDTO course = null;
@@ -52,9 +82,10 @@ public class CourseDAO extends GenericDAO<CourseDTO> implements OneIdCRUD<Course
     }
 
     /**
+     * Inserts a new CourseDTO object into the database.
      *
-     * @param e
-     * @return
+     * @param e the CourseDTO object to insert
+     * @return the number of rows affected, or -1 if an error occurred
      */
     @Override
     public int insert(CourseDTO e) {
@@ -81,6 +112,12 @@ public class CourseDAO extends GenericDAO<CourseDTO> implements OneIdCRUD<Course
         return result;
     }
 
+    /**
+     * Updates an existing CourseDTO object in the database.
+     *
+     * @param course the CourseDTO object to update
+     * @return the number of rows affected, or -1 if an error occurred
+     */
     @Override
     public int update(CourseDTO course) {
         String sql = "UPDATE course SET courseName = ? WHERE courseId = ?";
@@ -105,6 +142,12 @@ public class CourseDAO extends GenericDAO<CourseDTO> implements OneIdCRUD<Course
         return result;
     }
 
+    /**
+     * Deletes a CourseDTO object from the database using the specified course ID.
+     *
+     * @param id the course ID
+     * @return the number of rows affected, or -1 if an error occurred
+     */
     @Override
     public int delete(String id) {
         String sql = "DELETE FROM course WHERE courseId = ?";
@@ -127,5 +170,4 @@ public class CourseDAO extends GenericDAO<CourseDTO> implements OneIdCRUD<Course
         }
         return result;
     }
-
 }

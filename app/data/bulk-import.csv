@@ -2,3 +2,78 @@ studentId, firstName, lastName, courseId, courseName, term, year
 123546851, john, smith, cst8288, Software Design Patterns, WINTER, 2024
 9861534S2, jane, smyth, mat1101A, Intro to Math, FALL, 2025
 3215619823, michael, hill, cst8288, Software Design Patterns, SUMMER, 1955
+123456789, Alice, Johnson, cst1234, Software Design Patterns, WINTER, 2024
+987654321, Bob, Brown, mat1101, Intro to Math, FALL, 2025
+456789123, Charlie, Davis, phy1010, Physics 101, SUMMER, 2023
+234567891, David, Wilson, cst8288, Software Design Patterns, WINTER, 2024
+345678912, Emma, Moore, chem1101, Intro to Chemistry, FALL, 2025
+567891234, Frank, Taylor, bio1010, Biology 101, SUMMER, 2024
+678912345, Grace, Anderson, his1010, History 101, FALL, 2023
+789123456, Hannah, Thomas, eng1101, English 1101, WINTER, 2024
+891234567, Ian, Jackson, cst8288, Software Design Patterns, FALL, 2025
+912345678, Julia, White, mat1101, Intro to Math, SUMMER, 2023
+123456780, Kevin, Harris, phy1010, Physics 101, WINTER, 2024
+234567890, Laura, Martin, chem1101, Intro to Chemistry, FALL, 2025
+345678901, Michael, Clark, bio1010, Biology 101, SUMMER, 2024
+456789012, Nancy, Lewis, his1010, History 101, WINTER, 2023
+567890123, Oscar, Robinson, eng1101, English 1101, FALL, 2024
+678901234, Paul, Walker, cst8288, Software Design Patterns, SUMMER, 2025
+789012345, Quinn, Young, mat1101, Intro to Math, WINTER, 2023
+890123456, Rachel, Allen, phy1010, Physics 101, FALL, 2024
+901234567, Steve, King, chem1101, Intro to Chemistry, SUMMER, 2025
+012345678, Tina, Wright, bio1010, Biology 101, WINTER, 2024
+123456701, Uma, Scott, his1010, History 101, FALL, 2023
+234567812, Victor, Adams, eng1101, English 1101, SUMMER, 2024
+345678923, Wendy, Baker, cst8288, Software Design Patterns, WINTER, 2025
+456789034, Xavier, Carter, mat1101, Intro to Math, FALL, 2023
+567890145, Yolanda, Evans, phy1010, Physics 101, SUMMER, 2024
+678901256, Zach, Griffin, chem1101, Intro to Chemistry, WINTER, 2025
+789012367, Alan, Lopez, bio1010, Biology 101, FALL, 2023
+890123478, Brenda, Perez, his1010, History 101, SUMMER, 2024
+901234589, Carl, Turner, eng1101, English 1101, WINTER, 2025
+012345690, Diana, Collins, cst8288, Software Design Patterns, FALL, 2023
+123456701, Ethan, Stewart, mat1101, Intro to Math, SUMMER, 2024
+234567812, Fiona, Morris, phy1010, Physics 101, WINTER, 2025
+345678923, George, Murphy, chem1101, Intro to Chemistry, FALL, 2023
+456789034, Helen, Cook, bio1010, Biology 101, SUMMER, 2024
+567890145, Jack, Rogers, his1010, History 101, WINTER, 2025
+678901256, Karen, Reed, eng1101, English 1101, FALL, 2023
+789012367, Liam, Bailey, cst8288, Software Design Patterns, SUMMER, 2024
+890123478, Mona, Bell, mat1101, Intro to Math, WINTER, 2025
+901234589, Neil, Cooper, phy1010, Physics 101, FALL, 2023
+012345690, Olivia, Ward, chem1101, Intro to Chemistry, SUMMER, 2024
+123456701, Peter, Brooks, bio1010, Biology 101, WINTER, 2025
+234567812, Quinn, Rivera, his1010, History 101, FALL, 2023
+345678923, Rose, Sanders, eng1101, English 1101, SUMMER, 2024
+456789034, Sam, Price, cst8288, Software Design Patterns, WINTER, 2025
+567890145, Tina, Foster, mat1101, Intro to Math, FALL, 2023
+678901256, Uriel, Powell, phy1010, Physics 101, SUMMER, 2024
+789012367, Vicky, Long, chem1101, Intro to Chemistry, WINTER, 2025
+890123478, Walter, Patterson, bio1010, Biology 101, FALL, 2023
+901234589, Xena, Hughes, his1010, History 101, SUMMER, 2024
+12345678, Alice, Johnson, cst12345, Software Design Patterns, WINTER, 2024
+98765432A, Bob, Brown, mat11, Intro to Math, SPRING, 2025
+456789123, Charlie, Davis, phy101, Physics 101, SUMMER, 202
+234567891, David, Wilson, cst8288, Software Design Patterns, WINTER, 1965
+34567891, Emma, Moore, chem11011, Intro to Chemistry, FALL, 2025
+56789123A, Frank, Taylor, bio1010, Biology 101, SPRING, 2024
+678912345, Grace, Anderson, his10, History 101, FALL, 202
+789123456, Hannah, Thomas, eng1101, English 1101, NONE, 2024
+891234567, Ian, Jackson, cst828, Software Design Patterns, SUMMER, 2023
+91234567, Julia, White, mat11011, Intro to Math, WINTER, 2025
+123456789A, Kevin, Harris, phy1010, Physics 101, FALL, 2024
+234567891, Laura, Martin, chem1101, Intro to Chemistry, SUMMER, 1966
+3456789012, Michael, Clark, bio101, Biology 101, WINTER, 2024
+456789012, Nancy, Lewis, his1010, History 101, SPRING, 2023
+567890123, Oscar, Robinson, eng1101, English 1101, SUMMER, 202
+67890123A, Paul, Walker, cst8288, Software Design Patterns, FALL, 2024
+78901234, Quinn, Young, mat1101, Intro to Math, WINTER, 1966
+8901234567, Rachel, Allen, phy1010, Physics 101, SUMMER, 2024
+901234567, Steve, King, chem1101, Intro to Chemistry, FALL, 2025A
+01234567A, Tina, Wright, bio1010, Biology 101, WINTER, 2024
+123456701, Uma, Scott, his101, History 101, SUMMER, 202
+23456789B, Victor, Adams, eng1101, English 1101, FALL, 2024
+34567892, Wendy, Baker, cst82888, Software Design Patterns, WINTER, 2024
+456789034, Xavier, Carter, mat110, Intro to Math, FALL, 2025
+56789014A, Yolanda, Evans, phy1010, Physics 101, SUMMER, 2024
+67890125, Zach, Griffin, chem1101, Intro to Chemistry, WINTER, 2024A

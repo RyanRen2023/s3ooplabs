@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.cst8288Lab2"},{"l":"org.cst8288Lab2.dao"},{"l":"org.cst8288Lab2.dto"},{"l":"org.cst8288Lab2.report"},{"l":"org.cst8288Lab2.utility"}];updateSearchResults();
